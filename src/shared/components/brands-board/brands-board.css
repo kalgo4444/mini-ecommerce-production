@@ -1,0 +1,17 @@
+.brands-carousel {
+  display: flex;
+  flex: 0, 0, 100%;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+}
+.brands-group {
+  will-change: transform; /* We should be nice to the browser - let it know what we're going to animate. */
+  animation: scrolling 15s linear infinite;
+  transform: translateX(120%);
+}
+@keyframes scrolling {
+  100% {
+    transform: translateX(-120%);
+  }
+}

@@ -1,0 +1,30 @@
+@import "tailwindcss";
+
+@theme {
+  --color-primary: #f2f0f1;
+  --color-second-text: #00000060;
+  --color-bg-card: #f0eeed;
+  --radius-radius: 64px;
+  --color-main-border: #e6e6e6;
+}
+
+@layer base {
+  body {
+    @apply bg-white text-black;
+  }
+  input {
+    @apply outline-none border-0;
+  }
+  button {
+    @apply cursor-pointer;
+  }
+}
+
+@layer components {
+  .container {
+    @apply max-w-[1270px] w-full mx-auto px-5;
+  }
+  .btn {
+    @apply border border-main-border text-black text-lg rounded-radius transition-all duration-200;
+  }
+}
