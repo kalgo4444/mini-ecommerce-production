@@ -11,6 +11,7 @@ export default function AuthMe() {
         console.log(data?.data);
       } catch (error) {
         console.error(error);
+        window.location.href = "/";
       }
     };
     authMe();

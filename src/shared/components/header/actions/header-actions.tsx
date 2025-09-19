@@ -7,7 +7,6 @@ import { cookies } from "next/headers";
 const HeaderActions = async () => {
   const cookie = await cookies();
   const token = cookie.get("token")?.value;
-  console.log(token);
   return (
     <ul className="flex items-center gap-x-4">
       <li>

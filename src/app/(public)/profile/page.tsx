@@ -2,9 +2,9 @@ import { memo } from "react";
 
 const ProfilePage = () => {
   return (
-    <div className="ProfilePage">
-      <h2>ProfilePage</h2>
-    </div>
+    <section className="min-h-[60vh]">
+      <h1 className="text-center">Profile Page</h1>
+    </section>
   );
 };
 
