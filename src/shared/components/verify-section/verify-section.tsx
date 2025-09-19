@@ -17,7 +17,7 @@ const VerifySection = ({ user }: { user: string }) => {
       if (!res.ok) {
         setErr(true);
       }
-      window.location.href = "/profile";
+      window.location.href = "/";
     });
   }, []);
   return (
