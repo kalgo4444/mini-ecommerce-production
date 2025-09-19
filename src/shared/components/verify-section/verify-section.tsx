@@ -1,5 +1,6 @@
 "use client";
 
+import { DASHBOARD_LINK } from "@/shared/links";
 import { memo, useEffect, useState } from "react";
 
 const VerifySection = ({ user }: { user: string }) => {
@@ -16,7 +17,7 @@ const VerifySection = ({ user }: { user: string }) => {
       if (!res.ok) {
         setErr(true);
       }
-      window.location.href = "/";
+      window.location.href = "/profile";
     });
   }, []);
   return (
@@ -25,7 +26,10 @@ const VerifySection = ({ user }: { user: string }) => {
         <h2 className="text-4xl font-bold">Verify...</h2>
         <p className="text-xl font-semibold">Need minute for success!</p>
         {err && (
-          <button className="btn px-5 py-2 bg-white hover:bg-white/90 duration-200 text-black my-5">
+          <button
+            onClick={() => open(DASHBOARD_LINK)}
+            className="btn px-5 py-2 bg-white hover:bg-white/90 duration-200 text-black my-5"
+          >
             Try Again
           </button>
         )}

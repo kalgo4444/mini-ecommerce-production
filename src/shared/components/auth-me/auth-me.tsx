@@ -1,0 +1,17 @@
+"use client";
+
+import { useEffect } from "react";
+
+export default function AuthMe() {
+  useEffect(() => {
+    const authMe = async () => {
+      try {
+        await fetch("/api/auth/me");
+      } catch (error) {
+        console.error(error);
+      }
+    };
+    authMe();
+  }, []);
+  return null;
+}
