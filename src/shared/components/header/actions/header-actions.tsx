@@ -1,6 +1,7 @@
 import { CircleUserIcon, SearchIcon, ShoppingCartIcon } from "lucide-react";
 import Link from "next/link";
 import { memo } from "react";
+import LoginBtn from "../../ui/login-btn/login-btn";
 
 const HeaderActions = () => {
   return (
@@ -16,9 +17,7 @@ const HeaderActions = () => {
         </Link>
       </li>
       <li>
-        <Link href={"/user"}>
-          <CircleUserIcon />
-        </Link>
+        <LoginBtn />
       </li>
     </ul>
   );
