@@ -6,7 +6,7 @@ import { memo } from "react";
 
 const HomePage = async () => {
   const response = await fetch(BASE_URL + "?limit=8", {
-    next: { revalidate: 300 },
+    next: { revalidate: 60 * 60 * 2 },
   });
   const data = await response.json();
 
